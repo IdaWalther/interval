@@ -1,0 +1,17 @@
+.frontpage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkBackgroundcolor);
+    color: var(--lightTextcolor);
+}
+
+.frontpage__button {
+    background-color: transparent;
+    border: none;
+    color: var(--lightTextcolor);
+    font-weight: 400;
+    font-size: 14px;
+}

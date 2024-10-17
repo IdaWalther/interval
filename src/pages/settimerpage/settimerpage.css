@@ -1,0 +1,78 @@
+.settimerpage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightBackgroundcolor);
+    color: var(--darkTextcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.settimerpage__section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.settimerpage__number {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: -1rem;
+}
+
+.settimerpage__number h1 {
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.settimerpage__number p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.settimerpage__number figure {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.settimerpage__number section {
+    text-align: center;
+}
+
+.settimerpage__check {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
+
+.checkboxSection {
+    margin: .5rem;
+}
+
+.settimerpage__check label {
+    font-size: 20px;
+    font-weight: 400px;
+    margin: 1rem;
+}
+
+.startTimerButton {
+    width: 80vw; 
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    padding: .6rem;
+    border-radius: .6rem;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: var(--darkBackgroundcolor);
+}

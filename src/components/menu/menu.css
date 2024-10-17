@@ -1,0 +1,44 @@
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--darkBackgroundcolor);
+    color: var(--lightTextcolor);
+    width: 100vw;
+}
+
+.toggleMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--darkBackgroundcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.nav__button {
+    background-color: var(--darkBackgroundcolor);
+    color: var(--lightTextcolor);
+    padding: 2rem;
+    border: none;
+    border-radius: .6rem;
+    width: 100%;
+    margin: .6rem;
+    text-transform: uppercase;
+}
+
+.open {
+    transform: translateX(0);
+}
