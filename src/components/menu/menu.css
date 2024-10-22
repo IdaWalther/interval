@@ -5,6 +5,7 @@
     background-color: var(--darkBackgroundcolor);
     color: var(--lightTextcolor);
     width: 100vw;
+    z-index: 10;
 }
 
 .toggleMenu {

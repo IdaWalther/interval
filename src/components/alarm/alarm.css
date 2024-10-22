@@ -1,4 +1,4 @@
-.alarmpage {
+.alarm {
     width: 100vw;
     height: 100vh;
     background-color: var(--darkBackgroundcolor);
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.alarmpage__section {
+.alarm__section {
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.alarmpageTime {
+.alarmTime {
     font-weight: 700;
     font-size: 36px;
 }

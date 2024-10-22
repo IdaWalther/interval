@@ -1,4 +1,4 @@
-.frontpage {
+.startpage {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     color: var(--lightTextcolor);
 }
 
-.frontpage__button {
+.startpage__button {
     background-color: transparent;
     border: none;
     color: var(--lightTextcolor);

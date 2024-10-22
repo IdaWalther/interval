@@ -1,8 +1,7 @@
 import './menu.css'
 import {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
 
-function Menu() {
+function Menu({showSettimer, showAnalog, showDigital, showText }) {
     const [isOpen, setIsOpen] = useState(false)
     const toggleNav = () => {
         if(isOpen === false){
@@ -11,22 +10,10 @@ function Menu() {
             setIsOpen(false)
         }
     }
-    const navigate = useNavigate();
-    const settimer = () => {
-        navigate('/set-timer');
-        toggleNav();
-    }
-    const analog = () => {
-        navigate('/analog');
-        toggleNav();
-    }
-    const digital = () => {
-        navigate('/digital');
-        toggleNav();
-    }
-    const text = () => {
-        navigate('/text');
-        toggleNav();
+
+    const handleButtonClick = (target) => {
+        toggleNav()
+        target()
     }
 
     return (
@@ -35,10 +22,10 @@ function Menu() {
                 <img src="../../../src/assets/navicon.svg"/>
             </button>
             <nav className={`nav ${isOpen ? 'open' : ''}`}>
-                <button className="nav__button" onClick={settimer}>Set Timer</button>
-                <button className="nav__button" onClick={analog}>Analog Timer</button>
-                <button className="nav__button" onClick={digital}>Digital Timer</button>
-                <button className="nav__button" onClick={text}>Text Timer</button>
+                <button className="nav__button" onClick={()=>handleButtonClick(showSettimer)}>Set Timer</button>
+                <button className="nav__button" onClick={()=>handleButtonClick(showAnalog)}>Analog Timer</button>
+                <button className="nav__button" onClick={()=>handleButtonClick(showDigital)}>Digital Timer</button>
+                <button className="nav__button" onClick={()=>handleButtonClick(showText)}>Text Timer</button>
             </nav>
         </header>
     )

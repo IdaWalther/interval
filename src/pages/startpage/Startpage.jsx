@@ -1,15 +1,15 @@
-import './frontpage.css'
+import './startpage.css'
 import { useNavigate } from 'react-router-dom'
 
-function Frontpage() {
+function Startpage() {
     const navigate = useNavigate();
     const settimer = () => {
-        navigate('/set-timer');
+        navigate('/timer');
     }
 
     return (
-        <main className="frontpage">
-            <button className="frontpage__button" onClick={settimer}>
+        <main className="startpage">
+            <button className="startpage__button" onClick={settimer}>
                 <img src="../../../src/assets/logo.svg" alt="logo"/>
                 <p>For all your timing needs</p>
             </button>
@@ -17,4 +17,4 @@ function Frontpage() {
     )
 }
 
-export default Frontpage
+export default Startpage
