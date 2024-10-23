@@ -154,7 +154,7 @@ const showDigital = () => {
                             x: '100vw'
                         }}
                         transition={{
-                            duration: 0.8,
+                            duration: 0.7,
                         }}
                     >
                         <Analog 
@@ -179,7 +179,7 @@ const showDigital = () => {
                             x: '100vw'
                         }}
                         transition={{
-                            duration: 0.8,
+                            duration: 0.7,
                         }}
                     >
                         <Digital 
@@ -204,7 +204,7 @@ const showDigital = () => {
                             x: '100vw'
                         }}
                         transition={{
-                            duration: 0.8,
+                            duration: 0.7,
                         }}
                     >
                         <Text 

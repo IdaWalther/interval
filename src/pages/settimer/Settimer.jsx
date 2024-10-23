@@ -1,7 +1,7 @@
 import './settimer.css'
 import { useState } from 'react'
 import Starttimer from '../starttimer/Starttimer'
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 
 function Settimerpage() {
     const [time, setTime] = useState(1);
@@ -41,8 +41,25 @@ function Settimerpage() {
 
     return (
         <>
+        <AnimatePresence mode="wait">
             {handleSetTimer ?
-                <main className="settimerpage">
+                <motion.main 
+                    className="settimerpage"
+                    key='settimer'
+                    initial={{
+                        x: '-100vw'
+                    }}
+                    animate={{
+                        x:0
+                    }}
+                    exit={{
+                        x: '100vw'
+                    }}
+                    transition={{
+                        duration: 0.7,
+                    }}
+                
+                >
                     <section className="settimerpage__section">
                         <section className="settimerpage__number">
                             <figure className="decrease" onClick={decreaseMinutes}>&lt;</figure>
@@ -75,7 +92,7 @@ function Settimerpage() {
                             </section>
                         </section>
                     </section>
-                </main>
+                </motion.main>
             :
                 <Starttimer 
                     time={time}
@@ -84,6 +101,7 @@ function Settimerpage() {
                     intervalcheckbox = {intervalcheckbox}
                 />
             }
+        </AnimatePresence>
         </>
     )
 }
