@@ -2,7 +2,6 @@ import './text.css'
 import Abort from '../abort/Abort'
 
 function Texttime({timeleft, stopTimer, showSettimer}) {
-
     const number = [
         'noll', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio',
         'tio', 'elva', 'tolv', 'tretton', 'fjorton', 'femton', 'sexton', 'sjutton', 'arton', 'nitton',

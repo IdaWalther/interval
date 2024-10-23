@@ -17,7 +17,7 @@
     justify-content: space-around;
 }
 .relativeBox{
-    background-color: antiquewhite;
+    background-color: #fff;
     border-radius: 50%;
     border: 1px solid black;
     position: relative;
@@ -29,7 +29,7 @@
     position: absolute;
     top: 21px;
     left: 50%;
-    background-color: #C4B5A6;
+    background-color: #000000;
     width: .2rem;
     height: 119px;
     z-index: 2;
@@ -37,11 +37,11 @@
 }
 
 .sekundvisare {
-    background-color: #C4B5A6;
+    background-color: #000000;
     position: absolute;
     top: 0;
     left: 50%;
-    width: .2rem;
+    width: .15rem;
     height: 139px;
     z-index: 2;
 }

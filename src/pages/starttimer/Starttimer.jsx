@@ -6,6 +6,7 @@ import Analog from '../../components/analog/Analog'
 import Text from '../../components/text/Texttime'
 import Digital from '../../components/digital/Digital'
 import Alarm from '../../components/alarm/Alarm'
+import {motion, AnimatePresence} from 'framer-motion'
 const timer = new Timer()
 
 function Starttimer({time, showSettimer, breakbox, intervalcheckbox}) {
@@ -124,11 +125,13 @@ const showDigital = () => {
     setDigital(true)
     setAlarm(false)
 }
+
     return (
         <>
             {(alarm&&<Alarm 
                 display = {alarm}
                 showSettimer = {showSettimer}
+
             />)}
             {(!alarm&&<Menu 
                 showSettimer = {showSettimer}
@@ -136,24 +139,83 @@ const showDigital = () => {
                 showText = {showText}
                 showDigital = {showDigital}
             />)}
-            {analog && (<Analog 
-                timeleft = {timeleft}
-                stopTimer = {stopTimer}
-                showSettimer = {showSettimer}
-                display = {analog}
-            />)}
-            {(digital && <Digital 
-                timeleft = {timeleft}
-                stopTimer = {stopTimer}
-                showSettimer = {showSettimer}
-                display = {digital}
-            />)}
-            {(text &&<Text 
-                timeleft = {timeleft}
-                stopTimer = {stopTimer}
-                showSettimer = {showSettimer}
-                display = {text}
-            />)}
+            <AnimatePresence mode="wait">
+                {analog && ( 
+                    <motion.section 
+                        className="frame"
+                        key='analog'
+                        initial={{
+                            x: '-100vw'
+                        }}
+                        animate={{
+                            x:0
+                        }}
+                        exit={{
+                            x: '100vw'
+                        }}
+                        transition={{
+                            duration: 0.8,
+                        }}
+                    >
+                        <Analog 
+                        timeleft = {timeleft}
+                        stopTimer = {stopTimer}
+                        showSettimer = {showSettimer}
+                        display = {analog}
+                        />
+                    </motion.section>
+                )}
+                {digital && ( 
+                    <motion.section
+                        className="frame"
+                        key='digital'
+                        initial={{
+                            x: '-100vw'
+                        }}
+                        animate={{
+                            x:0
+                        }}
+                        exit={{
+                            x: '100vw'
+                        }}
+                        transition={{
+                            duration: 0.8,
+                        }}
+                    >
+                        <Digital 
+                            timeleft = {timeleft}
+                            stopTimer = {stopTimer}
+                            showSettimer = {showSettimer}
+                            display = {digital}
+                        />
+                    </motion.section>
+                )}
+                {(text && 
+                    <motion.section
+                        className="frame"
+                        key='text'
+                        initial={{
+                            x: '-100vw'
+                        }}
+                        animate={{
+                            x:0
+                        }}
+                        exit={{
+                            x: '100vw'
+                        }}
+                        transition={{
+                            duration: 0.8,
+                        }}
+                    >
+                        <Text 
+                            timeleft = {timeleft}
+                            stopTimer = {stopTimer}
+                            showSettimer = {showSettimer}
+                            display = {text}
+                        />
+                    </motion.section>
+                )}
+            </AnimatePresence>
         </>
     )
 }

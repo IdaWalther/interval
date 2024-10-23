@@ -1,18 +1,23 @@
 import './settimer.css'
 import { useState } from 'react'
 import Starttimer from '../starttimer/Starttimer'
+import {motion} from 'framer-motion'
 
 function Settimerpage() {
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState(1);
     const [handleSetTimer, SetHandleSetTimer] = useState(true)
     const [intervalcheckbox, setIntervalcheckbox] = useState(false)
     const [breakbox, setBreakbox] = useState(false);
 
     const increaseMinutes =  (() => {
+        if(time < 60) {
         setTime(time => time + 1)
+        } else {
+            setTime(60)
+        }
     })
     const decreaseMinutes = (() => {
-        if(time > 0) {
+        if(time > 1) {
             setTime(time => time - 1)
         } 
     })
@@ -57,7 +62,16 @@ function Settimerpage() {
                                 <label htmlFor="break">5 min break / interval</label>
                             </section>
                             <section>
-                                <button className="startTimerButton" onClick={startTheTimer}>Start Timer</button>
+                                <motion.button 
+                                    className="startTimerButton" 
+                                    onClick={startTheTimer}
+                                    whileTap={{
+                                        scale: 0.95,
+                                        boxShadow: '1px 1px 10px #141414',
+                                    }}
+                                >
+                                    Start Timer
+                                </motion.button>
                             </section>
                         </section>
                     </section>

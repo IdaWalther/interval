@@ -10,3 +10,7 @@
   --darkTextcolor: #222222;
   --lightTextcolor: #ffffff;
 }
+
+body {
+  background-color: var(--lightBackgroundcolor);
+}

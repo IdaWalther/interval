@@ -10,8 +10,8 @@
 
 .toggleMenu {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1rem;
+    left: 1rem;
     z-index: 10;
 }
 
@@ -38,8 +38,25 @@
     width: 100%;
     margin: .6rem;
     text-transform: uppercase;
+    transform: translate(-100vw)
 }
 
 .open {
     transform: translateX(0);
+}
+
+.slide {
+    transform: translate(0);
+    transition: transform 1s ease-out;
+}
+.slide:nth-of-type(2) {
+    transition-delay: .3s;
+}
+
+.slide:nth-of-type(3) {
+    transition-delay: .6s;
+}
+
+.slide:nth-of-type(4) {
+    transition-delay: .9s;
 }

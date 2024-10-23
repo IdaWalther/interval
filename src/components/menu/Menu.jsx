@@ -3,11 +3,14 @@ import {useState} from 'react'
 
 function Menu({showSettimer, showAnalog, showDigital, showText }) {
     const [isOpen, setIsOpen] = useState(false)
+    const [isSlide, setIsSlide] = useState(false)
     const toggleNav = () => {
         if(isOpen === false){
             setIsOpen(true)
+            setIsSlide(true)
         } else {
             setIsOpen(false)
+            setIsSlide(false)
         }
     }
 
@@ -22,10 +25,10 @@ function Menu({showSettimer, showAnalog, showDigital, showText }) {
                 <img src="../../../src/assets/navicon.svg"/>
             </button>
             <nav className={`nav ${isOpen ? 'open' : ''}`}>
-                <button className="nav__button" onClick={()=>handleButtonClick(showSettimer)}>Set Timer</button>
-                <button className="nav__button" onClick={()=>handleButtonClick(showAnalog)}>Analog Timer</button>
-                <button className="nav__button" onClick={()=>handleButtonClick(showDigital)}>Digital Timer</button>
-                <button className="nav__button" onClick={()=>handleButtonClick(showText)}>Text Timer</button>
+                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showSettimer)}>Set Timer</button>
+                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showAnalog)}>Analog Timer</button>
+                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showDigital)}>Digital Timer</button>
+                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showText)}>Text Timer</button>
             </nav>
         </header>
     )
