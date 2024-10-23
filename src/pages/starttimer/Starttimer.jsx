@@ -5,7 +5,7 @@ import Menu from '../../components/menu/Menu'
 import Analog from '../../components/analog/Analog'
 import Text from '../../components/text/Texttime'
 import Digital from '../../components/digital/Digital'
-import Alarm from '../../components/alarm/Alarm'
+import Alarm from '../alarm/Alarm'
 import {motion, AnimatePresence} from 'framer-motion'
 const timer = new Timer()
 

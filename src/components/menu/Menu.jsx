@@ -25,7 +25,7 @@ function Menu({showSettimer, showAnalog, showDigital, showText }) {
                 <img src="../../../src/assets/navicon.svg"/>
             </button>
             <nav className={`nav ${isOpen ? 'open' : ''}`}>
-                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showSettimer)}>Set Timer</button>
+                <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showSettimer)}>Set New Timer</button>
                 <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showAnalog)}>Analog Timer</button>
                 <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showDigital)}>Digital Timer</button>
                 <button className={`nav__button ${isSlide ? 'slide' : ''}`} onClick={()=>handleButtonClick(showText)}>Text Timer</button>
